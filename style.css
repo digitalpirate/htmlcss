@@ -1,0 +1,120 @@
+/* Visual Layout */
+body{
+  background-color: black;
+  color: whitesmoke;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding:0;
+  border:0;
+}
+
+img {
+  display: inline;
+
+}
+header{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(road-ahead-nioP2K58Dyc-unsplash.jpg);
+  background-origin: content-box;
+}
+
+h1 {
+  font-size: xx-large;
+}
+
+h2 {
+  font-size: x-large;
+}
+nav li{
+   list-style: none;
+   display: inline;
+   margin: 20px;
+   background-color: aquamarine;
+   border: 5px solid red;
+   order: 2;
+}
+
+nav a {
+    color: blue;
+    text-decoration: underline;
+    font-size: larger;
+    background-color:aqua;
+    display: inline;
+    order:3;
+}
+
+form {
+  border: 1px solid white;
+  border-radius: 5px;
+  width: fit-content;
+  height: fit-content;
+  padding: 10px;
+}
+form h2 {
+  display: block;
+}
+#login-form{
+  display: flex;
+  flex-direction: column;
+}
+.uppercase {
+  text-transform:uppercase;
+}
+.submit {
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+.reset {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Box Layout */
+
+.header {
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+}
+.sidebar {
+    grid-area: sidebar;
+}
+.footer {
+    grid-area: footer;
+    padding: 10px;
+  }
+.container {
+  min-width: 1024;
+  margin: 0;border: 0;padding: 0;
+  display: grid;
+  grid-template-columns: 25% 25% auto 20%;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header header header"
+    "main main . sidebar"
+    "footer footer footer footer";
+}
+.article-container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
